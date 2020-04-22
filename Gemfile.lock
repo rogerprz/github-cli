@@ -25,6 +25,7 @@ GEM
     benchmark (0.1.0)
     builder (3.2.4)
     coderay (1.1.2)
+    colorize (0.8.1)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     dotenv (2.7.5)
@@ -139,6 +140,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  colorize
   dotenv-rails
   json
   pry
