@@ -1,16 +1,19 @@
-# Github-CLI
+# Github-CLI 
 
 Github CLI provides a way to easily remove multiple repos and to output a list of all repositories. 
+** USE AT OWN RISK ** 
 
 # Getting Started
 
+### What you will need 
+
 * Create a PAT (Personal Access Token) within [Github>Settings>Developer Settings> PAT](https://github.com/settings/tokens) 
+* Github handle/username, i.e. [@rogerprz](https://github.com/rogerprz)
 
-
-
-
-
-
+### Built with
+* Ruby
+* Github Octokit
+* CLI
 
 # Disclaimer :warning:
 
