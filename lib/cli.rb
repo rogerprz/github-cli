@@ -31,9 +31,9 @@ def print_options
       menu.choice 'View available repos - pr', "pr", key: "pr"
       menu.choice 'View filtered repos - pfr', "pfr", key: "pfr"
       menu.choice 'Filter repos', "fr"
+      menu.choice 'Remove filtered repos', "dfr"
       menu.choice 'Select multiple repos to remove', 'mrd'
       menu.choice 'Delete single repo', "dr"
-      menu.choice 'Remove selected repos', "dfr"
       menu.choice 'Remove all repos (Dangerous)', "dar"
       menu.choice 'Exit program', "exit", key: 'e'
     end
