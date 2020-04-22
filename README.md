@@ -4,7 +4,7 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
 
 # Getting Started
 
-* Create a PAT (Personal Access Token) within Github>Settings>(Developer Settings> PAT)[https://github.com/settings/tokens] 
+* Create a PAT (Personal Access Token) within [Github>Settings>Developer Settings> PAT](https://github.com/settings/tokens) 
 
 
 
