@@ -8,7 +8,7 @@ def get_repos(uri)
     request['accept'] = 'application/vnd.github.v3+json'
     request.basic_auth(' ', "Basic #{ARGUMENTS['token']}")
     response = http.request(request)
-    { data: response_data(response), header: response.header }
+    { data: response_data(response), header: response.header, link: response.header.fetch(:link) }
   end
 end
 
@@ -20,14 +20,15 @@ def get_repos_with_paging(uri)
   uri = escaped_base_url.to_s
   response = get_repos(uri)
   results.concat(response.fetch(:data))
-  # skip_count = response.fetch(:data).size
+  # TODO: LINK Example
+  # "<https://api.github.com/user/17ff/repos?per_page=100&page=1>; rel=\"prev\", <https://api.github.com/user/176ffff/repos?per_page=100&page=1>; rel=\"first\""
   until response.fetch(:data).empty?
     page += 1
     uri = "#{uri}&page=#{page}"
     response = get_repos(uri)
     results.concat(response.fetch(:data))
   end
-  puts "Success! We found #{results.size} repos."
+  puts "Success! We found #{results.size} repos.".green
   ARGUMENTS['repos'] = results
   ARGUMENTS['select_repos'] = results
 end

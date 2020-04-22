@@ -13,7 +13,7 @@ def print_welcome
       bottom_right: '@rogerprz'
     }
   ) {
-          "WELCOME TO GITHUB CLI"
+          "WELCOME TO GITHUB CLI".on_red
         }
 end
 
@@ -25,10 +25,7 @@ def print_options
   input =
     prompt.select('', symbols: { marker: '->' }) do |menu|
       menu.choice 'View available repos - pr', "pr", key: "pr"
-      menu.choice 'View filtered repos - pfr', "pfr", key: "pfr"
-      menu.choice 'Filter repos', "fr"
-      menu.choice 'Remove filtered repos', "dfr"
-      menu.choice 'Select multiple repos to remove', 'mrd'
+      menu.choice 'Select repos to remove', 'mrd'
       menu.choice 'Delete single repo', "dr"
       menu.choice 'Remove all repos (Dangerous)', "dar"
       menu.choice 'Exit program', "exit", key: 'e'

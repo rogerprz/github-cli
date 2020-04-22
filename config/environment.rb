@@ -6,6 +6,7 @@ require('net/http')
 require('dotenv')
 require 'octokit'
 require "tty-prompt"
+require 'colorize'
 
 Dotenv.load
 Bundler.require
