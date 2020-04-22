@@ -8,6 +8,8 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
 ### What you will need 
 
 * Create a PAT (Personal Access Token) within [Github>Settings>Developer Settings> PAT](https://github.com/settings/tokens) 
+  * Check all the boxes when creating PAT
+  * Copy and save your PAT on a notepad to be used for later.
 * Github handle/username, i.e. [@rogerprz](https://github.com/rogerprz)
 
 ### Built with
