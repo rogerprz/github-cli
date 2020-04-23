@@ -35,8 +35,7 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
 # Connect/Thanks 
 Feel free to connect or message me about any questions or additional features. 
 
-* [![twitter](https://www.iconfinder.com/icons/173834/twitter_icon)](https://twitter.com/realrogerprz)
-* <a href="https://twitter.com/realrogerprz"> <img src="images/twitter_icon.png" width="40"> @realrogerprz</a> 
+<a href="https://twitter.com/realrogerprz"> <img src="images/twitter_icon.png" width="40"> @realrogerprz</a> 
 
 # Disclaimer :warning:
 
