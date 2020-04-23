@@ -32,8 +32,9 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
 **Note: CLI will not run if `token:` and `username:` are not present.**
 
 
-# Connect/Help? 
-Feel free to 
+# Connect/Thanks 
+Feel free to connect or message me about any questions or additional features. 
+* [twitter :twitter:](https://twitter.com/realrogerprz)
 
 # Disclaimer :warning:
 
