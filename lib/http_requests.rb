@@ -30,7 +30,6 @@ def get_repos_with_paging(uri)
   end
   puts "Success! We found #{results.size} repos.".green
   ARGUMENTS['repos'] = results
-  ARGUMENTS['select_repos'] = results
 end
 
 def response_data(response)

@@ -32,3 +32,15 @@ def print_options
     end
   input
 end
+
+def print_confirm_delete_repos(repos)
+  print_repos(repos)
+  print TTY::Box.frame(
+    align: :center, padding: [1, 10, 1, 10], title: { top_left: 'Github', bottom_right: '@rogerprz' }
+  ) {
+    "WARNING \n
+    You are going to permanently remove #{repos.size} repos. \n
+    CONFIRM\n
+    yes/y or no/n to return to main menu".red
+  }
+end

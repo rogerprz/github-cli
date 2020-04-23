@@ -17,7 +17,7 @@ end
 
 def main_menu
   input = print_options
-  puts "Selected: #{input}\n"
+  puts "Selected: #{input}\n".green
   menu_input(input)
 end
 
@@ -29,7 +29,7 @@ def print_repos(repos)
   repos.each do |repo|
     puts TTY::Link.link_to((repo['full_name']).to_s, repo['html_url'])
   end
-  puts "Total: #{repos.size}"
+  puts "Total: #{repos.size}".green
 end
 
 def menu_input(input)
@@ -42,7 +42,7 @@ def menu_input(input)
   when 'exit', 'e'
     abort('Goodbye')
   else
-    puts 'Not a valid option'
+    puts 'Not a valid option'.red
     main_menu
   end
 end
@@ -54,18 +54,6 @@ def select_multiple_repos
   results = prompt.multi_select('Select the repos you would like to remove'.blue, repos, filter: true)
   puts results
   confirm_filtered_repo_removal(results)
-end
-
-def print_confirm_delete_repos(repos)
-  print_repos(repos)
-  print TTY::Box.frame(
-    align: :center, padding: [1, 10, 1, 10], title: { top_left: 'Github', bottom_right: '@rogerprz' }
-  ) {
-    "WARNING \n
-    You are going to permanently remove #{repos.size} repos. \n
-    CONFIRM\n
-    yes/y or no/n to return to main menu"
-  }
 end
 
 def confirm_filtered_repo_removal(repos)
