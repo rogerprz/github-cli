@@ -36,7 +36,7 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
 Feel free to connect or message me about any questions or additional features. 
 
 * [![twitter](https://www.iconfinder.com/icons/173834/twitter_icon)](https://twitter.com/realrogerprz)
-* <a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TwitterDev</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+* <a href="https://twitter.com/TwitterDev?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @TwitterDev</a>
 
 # Disclaimer :warning:
 
