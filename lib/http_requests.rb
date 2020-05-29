@@ -1,20 +1,15 @@
 # frozen_string_literal: true
 
-def get_repos(_uri)
+def get_repos
   client = Octokit::Client.new(access_token: (ARGUMENTS['token']).to_s)
   client.auto_paginate = true
   results = client.repos(ARGUMENTS['username'])
-  puts "Success! We found #{results.size} repos.".green
-  ARGUMENTS['repos'] = results
-  # escaped_url = URI::DEFAULT_PARSER.escape(uri)
-  # uri = URI.parse(escaped_url)
-  # Net::HTTP.start(uri.host, uri.port, use_ssl: uri.scheme == 'https') do |http|
-  #   request = Net::HTTP::Get.new(uri)
-  #   request['accept'] = 'application/vnd.github.v3+json'
-  #   request.basic_auth(' ', "Basic #{ARGUMENTS['token']}")
-  #   response = http.request(request)
-  #   { data: response_data(response), header: response.header }
-  # end
+  if results.empty?
+    puts "No repos found!".red
+    ARGUMENTS['repos'] = results
+  else
+    puts "Success! We found #{results.size} repos.".green
+  end
 end
 
 def get_repos_with_paging(uri)

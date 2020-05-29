@@ -11,7 +11,7 @@ def start
   end
   ARGV.clear
   print_welcome
-  get_repos("https://api.github.com/users/#{ARGUMENTS['username']}/repos?per_page=100")
+  get_repos
   main_menu
 end
 
