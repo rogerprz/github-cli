@@ -17,19 +17,8 @@ end
 
 def main_menu
   input = print_options
-  puts "Selected: #{input}\n".green
+  puts "Selected: #{input}\n".yellow
   menu_input(input)
-end
-
-def filter_repos
-  menu_input(print_options)
-end
-
-def print_repos(repos)
-  repos.each do |repo|
-    puts TTY::Link.link_to((repo['full_name']).to_s, repo['html_url'])
-  end
-  puts "Total: #{repos.size}".green
 end
 
 def menu_input(input)
@@ -51,13 +40,19 @@ def select_multiple_repos
   prompt = TTY::Prompt.new
   repos = ARGUMENTS['repos'].map { |repo| repo['full_name'] }
   puts "\n"
-  results = prompt.multi_select('Select the repos you would like to remove'.blue, repos, filter: true)
-  puts results
-  confirm_filtered_repo_removal(results)
+  results = prompt.multi_select(
+    "Select the repos you would like to remove \n
+    Press Spacebar to select\n
+    Press Enter to confirm\n".green,
+    repos,
+    filter: true
+  )
+
+  confirm_repos_removal(results)
 end
 
-def confirm_filtered_repo_removal(repos)
-  print_confirm_delete_repos(repos)
+def confirm_repos_removal(repos)
+  print_delete_repos_warning_message(repos)
   input = gets.chomp
 
   case input
@@ -67,7 +62,7 @@ def confirm_filtered_repo_removal(repos)
     main_menu
   else
     puts "Invalid option"
-    confirm_filtered_repo_removal
+    confirm_repos_removal
   end
 end
 
@@ -76,5 +71,6 @@ def handle_repo_removal(repos)
     repo_name = repo["full_name"] || repo
     remove_repo(repo_name)
   end
+  get_repos
   main_menu
 end
