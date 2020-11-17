@@ -1,7 +1,8 @@
 # Github CLI 
 
-Github CLI provides a way to easily remove multiple repos and to output a list of all repositories. 
-** USE AT OWN RISK ** 
+Github CLI provides a way to easily remove multiple repos and to output a list of all repositories.
+
+**USE AT YOUR OWN RISK** 
 
 ### Built with
 * Ruby
@@ -13,10 +14,12 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
 
 ## What you will need 
 
-* Create a PAT (Personal Access Token) within [Github>Settings>Developer Settings> PAT](https://github.com/settings/tokens) 
+* PAT (Personal Access Token)
+  * [Github>Settings>Developer Settings> PAT](https://github.com/settings/tokens)
   * Check all the boxes when creating PAT
   * Copy and save your PAT on a notepad to be used for later.
-* Github handle/username, i.e. [@rogerprz](https://github.com/rogerprz)
+* Github handle/username
+  * Ex:[@rogerprz](https://github.com/rogerprz)
 
 
 ## Clone repo 
@@ -27,7 +30,7 @@ Github CLI provides a way to easily remove multiple repos and to output a list o
  
  Once repo has been clone `cd` into it.
   * Run `ruby bin/run.rb token:<PAT> username:<username>`
-   * You will need to replace `<PAT>` & `<username>` with your PAT and username.
+  * You will need to replace `<PAT>` & `<username>` with your PAT and username.
    
 **Note: CLI will not run if `token:` and `username:` are not present.**
 
